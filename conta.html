@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abertura de conta</title>
+</head>
+<body>
+    <div>
+    <h1>Vamos abrir sua conta</h1>
+    <br>
+    <p>Preencha todos os campos abaixo com muita atenção!</p>
+    <br>
+    <form action="#" method="post">
+    <b>Nome do titular</b><br><br>
+    <input type="text" id="nome" minlength="5" maxlength="50" placeholder="Digite seu nome">
+    <br><br>
+    <b>CPF</b><br><br>    
+    <input type="text" id="cpf" maxlength="14" placeholder="digite o CPF no formato 000.000.000-00">
+    <br><br>
+    <b>RG</b><br><br>
+    <input type="text" id="rg" maxlength="12" placeholder="Digite seu RG no formato 00.000.000-0">
+    <br><br>
+    <b>Data de nascimento</b><br><br>
+    <input type="date" name="nasc_cliente" id="nasc_cliente" placeholder="Digite sua data de nascimento">
+    <br><br>
+    <b>Sexo</b><br><br>
+    <select name="sexo_cliente" id="sexo_cliente">
+        <option value="selecione">Selecione</option>
+<option value="masculino">Masculino</option>
+<option value="feminino">Feminino</option>
+    </select>
+    <br><br>
+<b>E-mail</b><br><br>
+<input type="email" name="email_cliente" id="email" placeholder="Digite seu e-mail">
+<br><br>
+<b>Telefone</b><br><br>
+<input type="tel" name="telefone_cliente" id="telefone" placeholder="Digite seu melhor telefone">
+<br><br>
+<b>CEP</b><br><br>
+<input type="text" id="cep" maxlength="10" placeholder="Digite o cep 00.000-000">
+<br><br>
+<b>Endereço</b>
+<input type="text" id="endereco" minlength="20" maxlength="100" placeholder="digite avenida, estrada, rua">
+<br><br>
+<b>Numero</b><br><br>
+<input type="number" name="numero" id="numero" placeholder="Digite o número">
+<br><br>
+<b>Bairro</b>
+<input type="text" id="bairro" placeholder="Digite o bairro">
+<br><br>
+<b>Cidade</b><br><br>
+<input type="text" id="cidade" placeholder="Digite a cidade">
+<br><br>
+<b>Estado</b><br><br>
+<input type="text" id="estado" placeholder="Digite o Estado">
+<br><br>
+<b>Enviar</b>
+<b>Estado</b><br><br>
+<input type="text" placeholder="Digite o Estado">
+<br><br>
+<input type="submit" value="Cadastrar" id="btnCadastrar"  onclick="validarConta();" accesskey="c">
+   <br><br>
+</form>
+</div>
+<hr>
+<p><a href="index.html">Retornar ao Início</a></p>
+<script>
+    function validarConta() {
+        if(document.getElementById("nome").value == "") {
+           alert("Nome Obrigatório!"); 
+        }
+        else if(document.getElementById("cpf").value == "") {
+            alert("CPF obrigatório!");
+        }
+        else if(document.getelementbyid("rg").value == "") {
+            alert("RG Obrigatório!");
+        }
+        else if(document.getelementbyid("nasc_cliente").value == "") {
+            alert("Data de Nascimento obrigatória!");
+        }
+        else if(document.getelementbyid("sexo").value == "") {
+            alert("Sexo Obrigatório!");
+        }
+        else if(document.getelementbyid("email").value == "") {
+            alert("E-mail obrigatório!")
+        }
+        else if(document.getelementbyid("telefone").value == "") {
+            alert("Telefone Obrigatório");
+        }
+    else if(document.getelementbyid("cep").value == "") {
+        alert("Cep Obrigatório!");
+    }
+    else() {
+        exibir();
+    }
+    function exibir() {
+       alert("Abertura da conta efetuada com sucesso");
+       document.write("<div style=\"font-family: sans-serif; width: 75%; margin: 0 auto 0 auto;\"><h1 style=\"margin-left: 25%;\"></h1><br /><b>Nome:</b> "+'<i>'+document.getElementById("nome").value+'</i>'+'<br /><br />'
+            +"<b>CPF:</b> "+'<i>'+document.getElementById("cpf").value+'</i>'+'<br /><br />'
+            +"<b>RG:</b> "+'<i>'+document.getElementById("rg").value+'</i>'+'<br /><br />'
+            +"<b>Data de Nascimento:</b> "+'<i>'+document.getElementById("nasc_cliente").value+'</i>'+'<br /><br />'
+                +"<b>CEP:</b> "+'<i>'+document.getElementById("cep").value+'</i>'+'<br /><br />'
+            +"<b></b> "+'<i>'+document.getElementById("numero").value+'</i>'+'<br /><br />'
+            +"<b>Bairro:</b> "+'<i>'+document.getElementById("bairro").value+'</i>'+'<br /><br />'
+            +"<b>Cidade:</b> "+'<i>'+document.getElementById("cidade").value+'</i>'+'<br /><br />'
+            +"<b>Estado:</b> "+'<i>'+document.getElementById("estado").value+'</i>'+'<br /><br />'
+            +"<b>CEP:</b> "+'<i>'+document.getElementById("cep").value+'</i>'+'<br /><br />'
+            +"<b>Telefone:</b> "+'<i>'+document.getElementById("telefone").value+'</i>'+'<br /><br />'
+            +"<b>Telefone Celular:</b> "+'<i>'+document.getElementById("").value+'</i>'
+            +'<br /><br /><input type=\"submit\" value=\"Sair\" style=\"margin-left: 25%;\" onclick=\"reloadpage();\"></span></div>');
+        }
+        // função criada para que o usuário possa retornar a pagina inicial, após os dados validados serem exibidos na tela. //
+        function reloadpage(){
+            window.location="consultarconta.html"; 
+    }
+</script>
+<br>
+<footer>
+    &copy;
+&trade;
+</footer>
+</body>
+</html>
